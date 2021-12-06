@@ -1,1 +1,1 @@
-# group-project-alpha
+# League of Legends App
