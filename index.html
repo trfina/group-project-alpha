@@ -1,21 +1,139 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League of Legends Interactive App</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
   </head>
+
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        League of Legends
-      </h1>
+    <!-- Legends/Header -->
+    <header class="is-size-1 has-background-grey-light px-2 py-1">
+      <h1><a href="/">League of Legends</a></h1>
       <p class="subtitle">
-        League of Legends with <strong>Bulma Framework</strong>!
+        Interactive User Stats plus Weekly Legends for your Team
       </p>
-    </div>
-  </section>
+
+      <nav
+        class="is-size-4 has-background-grey-light has-text-right navbar"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="navbar-brand">
+          <!--<a class="navbar-item" href="https://bulma.io">-->
+          <img
+            src="https://bulma.io/images/bulma-logo.png"
+            width="112"
+            height="28"
+          />
+          <!-- </a> -->
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="px-2 py-1 navbar-item"> User Stats </a>
+
+            <a class="navbar-item"> Weekly Legends </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end Header -->
+
+    <!-- Legends/Weekly Free Legends-->
+    <section class="container">
+      <h2 class="px-2 py-1 is-size-3">
+        <strong>User Stats</strong>
+      </h2>
+      <div class="field">
+        <label class="px-2 py-1 label"
+          >Enter your League of Legends Username</label
+        >
+        <div class="px-2 py-1 control">
+          <input class="input" type="text" id="lol-username" />
+          <button id="getAccount">Get Account Info</button>
+          <button id="getFreeWeek">Get Free Week Rotation</button>
+        </div>
+        <p class="px-2 py-1 help">use the email registered with riot</p>
+      </div>
+
+      <!--Begin Display Account Info-->
+      <section class="section">
+        <div class="container">
+          <img id="accIcon" src="" alt="Profile Icon" />
+          <h3 id="accName"></h3>
+          <p id="accLevel"></p>
+        </div>
+      </section>
+      <!--End Display Acc Info-->
+
+      <h2 class="px-2 py-1 is-size-3">
+        <strong>Weekly Legends</strong>
+      </h2>
+      <div class="px-2 py-1">
+        <table class="is-bordered is-full-width">
+          This can also be generated in javascript
+          <th class="px-2 py-1">
+            Table Header
+            <tr class="px-2 py-1">
+              <td class="px-2 py-2" id="lol-1">img1</td>
+              <td class="px-2 py-2" id="lol-2">img2</td>
+              <td class="px-2 py-2" id="lol-3">img3</td>
+              <td class="px-2 py-2" id="lol-4">img4</td>
+              <td class="px-2 py-2" id="lol-5">img5</td>
+              <td class="px-2 py-2" id="lol-6">img6</td>
+            </tr>
+            <tr>
+              <td class="px-2 py-2" id="lol-7"></td>
+              <td class="px-2 py-2" id="lol-8"></td>
+              <td class="px-2 py-2" id="lol-9"></td>
+              <td class="px-2 py-2" id="lol-10"></td>
+              <td class="px-2 py-2" id="lol-11"></td>
+              <td class="px-2 py-2" id="lol-12"></td>
+            </tr>
+            <tr>
+              <td class="px-2 py-2" id="lol-13"></td>
+              <td class="px-2 py-2" id="lol-14"></td>
+              <td class="px-2 py-2" id="lol-15"></td>
+              <td class="px-2 py-2" id="lol-16"></td>
+              <td class="px-2 py-2" id="lol-17"></td>
+              <td class="px-2 py-2" id="lol-18"></td>
+            </tr>
+            <tr>
+              <td class="px-2 py-2" id="spacer"></td>
+              <td class="px-2 py-2" id="lol-19"></td>
+              <td class="px-2 py-2" id="lol-20"></td>
+              <td class="px-2 py-2" id="lol-21"></td>
+              <td class="px-2 py-2" id="lol-22"></td>
+              <td class="px-2 py-2" id="spacer"></td>
+            </tr>
+          </th>
+        </table>
+      </div>
+      <!-- table of weekly legends goes here-->
+    </section>
+
+    <!-- Legends/Footer-->
+    <section class="footer">
+      <h2 class="has-background-grey-light has-text-centered is-size-6">
+        Made with Fun by Team 1
+      </h2>
+    </section>
+    <script src="./assets/js/javascript.js"></script>
   </body>
 </html>
