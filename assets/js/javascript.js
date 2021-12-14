@@ -1,6 +1,6 @@
 
 // old api key const API_KEY = "RGAPI-2227c53f-77f9-44df-b194-43551ad47f54";
-const API_KEY = "RGAPI-dc57702d-9832-4a9c-b3c5-2f5585d893c0";
+const API_KEY = "RGAPI-0b9a4891-6ded-4ff4-aafd-e06031092ce4";
 
 var btnGetAccount = document.querySelector("#getAccount");
 var btnGetFreeWeek = document.querySelector("#getFreeWeek");
