@@ -1,4 +1,4 @@
-const API_KEY = "RGAPI-12fbfd1a-4e1c-4285-994a-fc8bb918a5d8";
+const API_KEY = "RGAPI-0b9a4891-6ded-4ff4-aafd-e06031092ce4";
 var btnGetAccount = document.querySelector("#getAccount");
 var btnGetFreeWeek = document.querySelector("#getFreeWeek");
 var freeWeekChampKey = [];
@@ -28,36 +28,35 @@ btnGetAccount.addEventListener('click', callSummonerv4);
  function callChampionRotation() {
     var APICallString = "https://na1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=" + API_KEY;
     
-    freeWeekChampKey = fetch(APICallString)
+     fetch(APICallString)
     .then(function(response){
         return response.json();
     })
-    .then(function(data) {
-        return data.freeChampionIds;
-         //freeWeekChampKey = data.freeChampionIds;
-         //console.log(freeWeekChampKey);
-    })
+    .then(function(data1) {
 
+        freeWeekChampKey = data1.freeChampionIds;
 
-    fetch("./assets/champion-data/champion.json")
-    .then(function(response){
+          return   fetch("./assets/champion-data/champion.json")
+    }) .then(function(response){
         return response.json();
     })
-    .then(function(data) {
-
-        
+     .then(function(data) {
 
         for (const champ in data.data){
-             console.log(champ)
-             console.log(data.data[champ].key);
-             console.log(freeWeekChampKey);
-            var x = data.data[champ].key;
-            if (freeWeekChampKey.includes(x)) {
-                console.log(champ);
-            }
+
+             for (i = 0; i < freeWeekChampKey.length; i++) {
+
+                if (freeWeekChampKey[i] == data.data[champ].key)  {
+                    console.log(champ);
+                    console.log("is Free Week");
+                }
+
+             }
 
             }
-    })
+    }) 
+
+
 
 }
 
