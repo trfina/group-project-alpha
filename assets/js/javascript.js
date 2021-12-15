@@ -1,4 +1,9 @@
+
 const API_KEY = "RGAPI-ded24a86-4751-407a-ac04-ad52f40a0e67";
+
+// old api key const API_KEY = "RGAPI-2227c53f-77f9-44df-b194-43551ad47f54";
+// const API_KEY = "RGAPI-0b9a4891-6ded-4ff4-aafd-e06031092ce4";
+
 var btnGetAccount = document.querySelector("#getAccount");
 var btnGetFreeWeek = document.querySelector("#getFreeWeek");
 var showEffectOne = document.getElementById("hides1");
