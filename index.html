@@ -67,13 +67,13 @@
           <button id="getAccount">Get Account Info</button>
           <button id="getFreeWeek">Get Free Week Rotation</button>
         </div>
-        <p class="px-2 py-1 help">use the email registered with riot</p>
+        <p class="px-2 py-1 help">Enter your League of Legends UserName</p>
       </div>
 
       <!--Begin Display Account Info-->
-      <section class="section">
+      <section class="section" id="hides1" display="none">
         <div class="container">
-          <img id="accIcon" src="" alt="Profile Icon" />
+          <img id="accIcon" src="" alt="Profile Icon" display="none" />
           <h3 id="accName"></h3>
           <p id="accLevel"></p>
         </div>
@@ -84,41 +84,50 @@
         <strong>Weekly Legends</strong>
       </h2>
       <div class="px-2 py-1">
-        <table class="is-bordered is-full-width">
+        <table id="weekly-champs" class="is-bordered is-full-width">
           Weekly Free Champions for Your Team
-          <th class="px-2 py-1">
-            
+          <th class="px-2 py-1">          
             <tr class="px-2 py-1">
-              <td class="px-2 py-2" id="lol-1"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-2"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-3"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-4"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-5"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-6"><img src="./assets/logo/3057.png" width="112" height="28"></td>
+
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-1" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-1" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-2" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-2" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-3" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-3" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-4" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-4" >Aatrox</figcaption></figcaption></figure></td>
             </tr>
             <tr>
-              <td class="px-2 py-2" id="lol-1"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-2"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-3"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-4"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-5"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-6"><img src="./assets/logo/3057.png" width="112" height="28"></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-5" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-5" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-6" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-6" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-7" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-7" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-8" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-8" >Aatrox</figcaption></figcaption></figure></td>
             </tr>
             <tr>
-              <td class="px-2 py-2" id="lol-1"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-2"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-3"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-4"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-5"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-6"><img src="./assets/logo/3057.png" width="112" height="28"></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-9" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-9" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-10" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-10" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-11" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-11" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-12" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-12" >Aatrox</figcaption></figcaption></figure></td>
             </tr>
             <tr>
-              <td class="px-2 py-2" id="lol-1"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-2"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-3"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-4"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-5"><img src="./assets/logo/3057.png" width="112" height="28"></td>
-              <td class="px-2 py-2" id="lol-6"><img src="./assets/logo/3057.png" width="112" height="28"></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-13" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-13" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-14" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-14" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-15" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-15" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-16" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-16" >Aatrox</figcaption></figcaption></figure></td>
+            </tr>
+            <tr>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-17" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-17" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-18" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-18" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-19" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-19" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-20" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-20" >Aatrox</figcaption></figcaption></figure></td>
+            </tr>
+            <tr>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-21" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-21" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-22" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-22" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-23" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-23" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-24" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-24" >Aatrox</figcaption></figcaption></figure></td>
+            </tr>
+            <tr>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-25" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-25" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-26" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-26" >Aatrox</figcaption></figcaption></figure></td>
+              <td class="px-2 py-4 has-text-centered has-text-weight-semibold" id="lol-1-1"><figure class="image is-128x128"><img id="lol-27" class="is-rounded" src="./assets/champion-icon/Aatrox.png"><figcaption id="loln-27" >Aatrox</figcaption></figcaption></figure></td>
             </tr>
           </th>
         </table>
