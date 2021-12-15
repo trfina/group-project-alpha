@@ -1,5 +1,5 @@
 
-const API_KEY = "RGAPI-ded24a86-4751-407a-ac04-ad52f40a0e67";
+const API_KEY = "RGAPI-eb9fff3d-0008-4aec-b4ee-53417bc00a09";
 
 // old api key const API_KEY = "RGAPI-2227c53f-77f9-44df-b194-43551ad47f54";
 // const API_KEY = "RGAPI-0b9a4891-6ded-4ff4-aafd-e06031092ce4";
