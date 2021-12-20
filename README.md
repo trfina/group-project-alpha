@@ -11,6 +11,8 @@ a website that offers users the chance to see the League of Legends champions of
 * Javascript
 * Two server-side APIs
 
+## Website
+
 https://trfina.github.io/league-of-legends-app (deployed application)
 
 github.com/trfina/league-of-legends-app (repository)
