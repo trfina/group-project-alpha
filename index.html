@@ -1,94 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>League of Legends Interactive App</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    />
-  </head>
 
-  <body>
-    <!-- Legends/Header -->
-    <header class="is-size-1 has-background-grey-light px-2 py-1">
-      <h1><a href="/">League of Legends</a></h1>
-      <p class="subtitle">
-        Interactive User Stats plus Weekly Champions for your Team
-      </p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>League of Legends Interactive App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+</head>
 
-      <nav
-        class="is-size-4 has-background-grey-light has-text-right navbar"
-        role="navigation"
-        aria-label="main navigation"
-      >
-        <div class="navbar-brand">
-          <!--<a class="navbar-item" href="https://bulma.io">-->
+<body>
+  <!-- Legends/Header -->
+  <header class="is-size-1 has-background-grey-light px-2 py-1">
+    <h1><a href="/">League of Legends</a></h1>
+    <p class="subtitle">
+      Interactive User Stats plus Weekly Champions for your Team
+    </p>
 
-            <img src="./assets/logo/3057.png" width="112" height="28">
-        </div>
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="px-2 py-1 navbar-item"> User Stats </a>
+    <nav class="is-size-4 has-background-grey-light has-text-right navbar" role="navigation"
+      aria-label="main navigation">
+      <div class="navbar-brand">
+        <!--<a class="navbar-item" href="https://bulma.io">-->
 
-            <a class="navbar-item"> Weekly Legends </a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- end Header -->
-
-    <!-- Legends/Weekly Free Legends-->
-    <section class="container is-mobile">
-      <h2 class="px-2 py-1 is-size-3">
-        <strong>User Stats</strong>
-      </h2>
-      <div class="field">
-        <label class="px-2 py-1 label"
-          >Enter your League of Legends Username</label
-        >
-        <div class="px-2 py-1 control">
-          <input class="input" type="text" id="lol-username" />
-          <button id="getAccount">Get Account Info</button>
-          <button id="getFreeWeek">Get Free Week Rotation</button>
-        </div>
-        <p class="px-2 py-1 help">Enter your League of Legends UserName</p>
+        <img src="./assets/logo/3057.png" width="112" height="28">
       </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="px-2 py-1 navbar-item"> User Stats </a>
 
-      <!--Begin Display Account Info-->
-      <section class="section is-mobile" id="hides1" display="none">
-        <div class="container">
-          <img id="accIcon" src="" alt="Profile Icon" display="none" />
-          <h3 id="accName"></h3>
-          <p id="accLevel"></p>
+          <a class="navbar-item"> Weekly Legends </a>
         </div>
-      </section>
-      <!--End Display Acc Info-->
+      </div>
+    </nav>
+  </header>
+  <!-- end Header -->
 
+
+  <!-- Legends/Weekly Free Legends-->
+  <section class="container is-mobile">
+    <h2 class="px-2 py-1 is-size-3">
+      <strong>User Stats</strong>
+    </h2>
+    <div class="field">
+      <label class="px-2 py-1 label">Enter your League of Legends Username</label>
+      <div class="px-2 py-1 control">
+        <input class="input" type="text" id="lol-username" />
+        <!--Modal For Incorect User Name-->
+        <section class="container is-mobile">
+            <div class="modallike" id="modal">
+              <h2 class="modal-text" id="modal-textset"><b>Incorrect Username, Try again!</b></h2>
+            </div>
+        </section>
+        <button id="getAccount">Get Account Info</button>
+        <button id="getFreeWeek">Get Free Week Rotation</button>
+      </div>
+      <p class="px-2 py-1 help">Enter your League of Legends UserName</p>
+    </div>
+
+    <!--Begin Display Account Info-->
+    <section class="section is-mobile" id="hides1" display="none">
+      <div class="container">
+        <img id="accIcon" src="" alt="Profile Icon" display="none" />
+        <h3 id="accName"></h3>
+        <p id="accLevel"></p>
+      </div>
+    </section>
+    <!--End Display Acc Info-->
+
+      <!-- Begin display of Weekly Champions using Bulma -->
       <h2 class="px-2 py-1 is-size-3 is-mobile">
         <strong>Weekly Legends for Your Team</strong>
       </h2>
       <div class="columns is-mobile px-4 py-75" id="weekly-champs">
-        <!-- Container for all Weekly Champions-->
+       <!-- Container for all Weekly Champions -->
           <div class="columns px-4 py-4">
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-1" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-1" class="is-rounded">
                 <figcaption class="has-text-centered has-text-weight-semibold" id="loln-1"></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-2" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-2" class="is-rounded">
                 <figcaption id="loln-2" class="has-text-centered has-text-weight-semibold"></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-3" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-3" class="is-rounded">
                 <figcaption id="loln-3" class="has-text-centered has-text-weight-semibold" ></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-4" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-4" class="is-rounded">
                 <figcaption id="loln-4" class="has-text-centered has-text-weight-semibold"></figcaption>
               </figure>
             </div>
@@ -96,22 +97,22 @@
 
           <div class="columns px-4 py-4">
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-5" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-5" class="is-rounded">
                 <figcaption class="has-text-centered has-text-weight-semibold" id="loln-5"></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-6" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-6" class="is-rounded">
                 <figcaption id="loln-6" class="has-text-centered has-text-weight-semibold"></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-7" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-7" class="is-rounded">
                 <figcaption id="loln-7" class="has-text-centered has-text-weight-semibold" ></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-8" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-8" class="is-rounded">
                 <figcaption id="loln-8" class="has-text-centered has-text-weight-semibold"></figcaption>
               </figure>
             </div>
@@ -119,22 +120,22 @@
           
           <div class="columns px-4 py-4">
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-9" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-9" class="is-rounded">
                 <figcaption class="has-text-centered has-text-weight-semibold" id="loln-9"></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-10" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-10" class="is-rounded">
                 <figcaption id="loln-10" class="has-text-centered has-text-weight-semibold"></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-11" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-11" class="is-rounded">
                 <figcaption id="loln-11" class="has-text-centered has-text-weight-semibold" ></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-12" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-12" class="is-rounded">
                 <figcaption id="loln-12" class="has-text-centered has-text-weight-semibold"></figcaption>
               </figure>
             </div>
@@ -142,52 +143,52 @@
 
           <div class="columns px-4 py-4">
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-13" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-13" class="is-rounded">
                 <figcaption class="has-text-centered has-text-weight-semibold" id="loln-13"></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-14" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-14" class="is-rounded">
                 <figcaption id="loln-14" class="has-text-centered has-text-weight-semibold"></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-15" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-15" class="is-rounded">
                 <figcaption id="loln-15" class="has-text-centered has-text-weight-semibold" ></figcaption>
               </figure>
             </div>
             <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-16" class="is-rounded" src="./assets/champion-icon/Aatrox.png">
+              <figure class="image is-128x128"><img id="lol-16" class="is-rounded">
                 <figcaption id="loln-16" class="has-text-centered has-text-weight-semibold"></figcaption>
               </figure>
             </div>
           </div>
 
-          <div class="columns px-4 py-4">
-            <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-17" class="is-rounded">
-                <figcaption class="has-text-centered has-text-weight-semibold" id="loln-17"></figcaption>
-              </figure>
-            </div>
-            <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-18" class="is-rounded">
-                <figcaption id="loln-18" class="has-text-centered has-text-weight-semibold"></figcaption>
-              </figure>
-            </div>
-            <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-19" class="is-rounded">
-                <figcaption id="loln-19" class="has-text-centered has-text-weight-semibold" ></figcaption>
-              </figure>
-            </div>
-            <div class="columns px-5 py-4">
-              <figure class="image is-128x128"><img id="lol-20" class="is-rounded">
-                <figcaption id="loln-20" class="has-text-centered has-text-weight-semibold"></figcaption>
-              </figure>
-            </div>
-          </div>
-
+      <div class="columns px-4 py-4">
+        <div class="columns px-5 py-4">
+          <figure class="image is-128x128"><img id="lol-17" class="is-rounded">
+            <figcaption class="has-text-centered has-text-weight-semibold" id="loln-17"></figcaption>
+          </figure>
+        </div>
+        <div class="columns px-5 py-4">
+          <figure class="image is-128x128"><img id="lol-18" class="is-rounded">
+            <figcaption id="loln-18" class="has-text-centered has-text-weight-semibold"></figcaption>
+          </figure>
+        </div>
+        <div class="columns px-5 py-4">
+          <figure class="image is-128x128"><img id="lol-19" class="is-rounded">
+            <figcaption id="loln-19" class="has-text-centered has-text-weight-semibold"></figcaption>
+          </figure>
+        </div>
+        <div class="columns px-5 py-4">
+          <figure class="image is-128x128"><img id="lol-20" class="is-rounded">
+            <figcaption id="loln-20" class="has-text-centered has-text-weight-semibold"></figcaption>
+          </figure>
+        </div>
       </div>
-<!-- end Container section -->
+
+    </div>
+    <!-- end Container section -->
 
     <!-- Legends/Footer-->
     <section class="hero-foot">
@@ -196,5 +197,6 @@
       </h2>
     </section>
     <script src="./assets/js/javascript.js"></script>
-  </body>
+</body>
+
 </html>
