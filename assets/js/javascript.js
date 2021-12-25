@@ -1,5 +1,6 @@
-//API_KEY Needs Regenerated every 24Hours last changed 12-23 8am
-const API_KEY = "RGAPI-68d124a0-6b44-462f-a5e6-344d28ad9b7f";
+//updated 12-244
+//API_KEY Needs Regenerated every 24Hours last changed 12-23 8am 
+const API_KEY = "RGAPI-67cbfc1f-7503-42fb-9f52-1b17fbb77262";
 
 //Variables
 var btnGetAccount = document.querySelector("#getAccount");
