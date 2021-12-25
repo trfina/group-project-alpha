@@ -1,6 +1,6 @@
-//updated 12-25 3am
+//updated 12-25 4am and is giving error --- is site down? nothing else has changed
 //API_KEY Needs Regenerated every 24Hours
-const API_KEY = "RGAPI-9b167bf3-ffaf-4014-b225-cefd3f8f6bdd";
+const API_KEY = "RGAPI-463e2641-5f91-4002-b7c8-78165b45530f";
 
 //Variables
 var btnGetAccount = document.querySelector("#getAccount");
