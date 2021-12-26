@@ -22,3 +22,4 @@ Made with Fun by Team 1: Alan, Tammy and David
 
 ![Screen Shot 2021-12-19 at 6 12 14 PM](https://user-images.githubusercontent.com/12851682/146695377-9c7e7dd3-7235-4b77-bbf0-3d016422c89d.png)
 
+![Screen Shot 2021-12-26 at 9 39 37 AM](https://user-images.githubusercontent.com/12851682/147411497-60719aec-5122-4ab3-87ee-148558844c80.png)
